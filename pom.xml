@@ -51,10 +51,27 @@
                       <goal>report</goal>
                   </goals>
               </execution>
-          </executions>
+            <execution>
+                <id>check-786521</id>
+                <goals>
+                    <goal>check</goal>
+                </goals>
+                <configuration>
+                    <rules>
+                        <rule>
+                            <limits>
+                                <limit>
+                                    <counter>BRANCH</counter>
+                                    <value>COVEREDRATIO</value>
+                                    <minimum>100%</minimum>
+                                </limit>
+                            </limits>
+                        </rule>
+                    </rules>
+                </configuration>
+            </execution>
+        </executions>
           </plugin>
       </plugins>
       </build>
-
-
-  </project>
+</project>
